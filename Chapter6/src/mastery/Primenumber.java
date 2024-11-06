@@ -66,6 +66,7 @@ Enter a number: 100
 100 is not a prime number.
 
 Test 2:
-
+Enter a number: 1
+1 is not a prime number.
  */
 	}
