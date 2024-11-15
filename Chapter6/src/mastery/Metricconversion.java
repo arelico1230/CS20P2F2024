@@ -9,12 +9,16 @@ Course: Computer Science 20
 */
 package mastery;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Metricconversion {
 	public static void main(String[] args) {
+		
+		// Lets the user input values and makes it so that decimals only go to the hundredths
         Scanner in = new Scanner(System.in);
-
+        DecimalFormat deca = new DecimalFormat("#.##");
+        
         //prompt user to enter a number to pick which type of metric conversion they want
             System.out.println("Metric Conversion Menu");
             System.out.println("1. Inches to Centimeters");
@@ -25,7 +29,7 @@ public class Metricconversion {
             System.out.println("6. Meters to Yards");
             System.out.println("7. Miles to Kilometers");
             System.out.println("8. Kilometers to Miles");
-            System.out.print("Enter your choice: ");
+            System.out.println("Enter your choice: ");
             int choice = in.nextInt();
             
             //switch case for each metric conversion choice
@@ -38,7 +42,7 @@ public class Metricconversion {
                     //holds user input
                     double inches = in.nextDouble();
                     //takes user input and applies inchestocm method to it
-                    System.out.println(inches + " inches is equal to " + inchestocm(inches) + " centimeters");
+                    System.out.println(inches + " inches is equal to " + deca.format(inchestocm(inches)) + " centimeters");
                     break;
                     
                   //runs case 2 when user picks 2
@@ -47,7 +51,8 @@ public class Metricconversion {
                     System.out.print("Enter centimeters: ");
                   //holds user input
                     double cm = in.nextDouble();
-                    System.out.println(cm + " centimeters is equal to " + cmtoinches(cm) + " inches");
+                  //takes user input and applies cmtoinches method to it
+                    System.out.println(cm + " centimeters is equal to " + deca.format(cmtoinches(cm)) + " inches");
                     break;
                     
                   //runs case 3 when user picks 3
@@ -56,8 +61,8 @@ public class Metricconversion {
                     System.out.print("Enter feet: ");
                   //holds user input
                     double feet = in.nextDouble();
-                  //takes user input and applies inchestocm method to it
-                    System.out.println(feet + " feet is equal to " + feettocm(feet) + " centimeters");
+                  //takes user input and applies feettocm method to it
+                    System.out.println(feet + " feet is equal to " + deca.format(feettocm(feet)) + " centimeters");
                     break;
                     
                   //runs case 4 when user picks 4
@@ -66,8 +71,8 @@ public class Metricconversion {
                     System.out.print("Enter centimeters: ");
                   //holds user input
                     cm = in.nextDouble();
-                  //takes user input and applies inchestocm method to it
-                    System.out.println(cm + " centimeters is equal to " + cmtofeet(cm) + " feet");
+                  //takes user input and applies cmtofeet method to it
+                    System.out.println(cm + " centimeters is equal to " + deca.format(cmtofeet(cm)) + " feet");
                     break;
                     
                   //runs case 5 when user picks 5
@@ -76,8 +81,8 @@ public class Metricconversion {
                     System.out.print("Enter yards: ");
                   //holds user input
                     double yards = in.nextDouble();
-                  //takes user input and applies inchestocm method to it
-                    System.out.println(yards + " yards is equal to " + yardstom(yards) + " meters");
+                  //takes user input and applies yardstom method to it
+                    System.out.println(yards + " yards is equal to " + deca.format(yardstom(yards)) + " meters");
                     break;
                     
                   //runs case 6 when user picks 6
@@ -86,8 +91,8 @@ public class Metricconversion {
                     System.out.print("Enter meters: ");
                   //holds user input
                     double m = in.nextDouble();
-                  //takes user input and applies  method to it
-                    System.out.println(m + " meters is equal to " + mtoyards(m) + " yards");
+                  //takes user input and applies mtoyards  method to it
+                    System.out.println(m + " meters is equal to " + deca.format(mtoyards(m)) + " yards");
                     break;
                     
                   //runs case 7 when user picks 7
@@ -97,7 +102,7 @@ public class Metricconversion {
                   //holds user input
                     double miles = in.nextDouble();
                   //takes user input and applies miletokm method to it
-                    System.out.println(miles + " miles is equal to " + miletokm(miles) + " kilometers");
+                    System.out.println(miles + " miles is equal to " + deca.format(miletokm(miles)) + " kilometers");
                     break;
                     
                   //runs case 8 when user picks 8
@@ -107,14 +112,14 @@ public class Metricconversion {
                   //holds user input
                     double km = in.nextDouble();
                   //takes user input and applies kmtomile method to it
-                    System.out.println(km + " kilometers is equal to " + kmtomile(km) + " miles");
+                    System.out.println(km + " kilometers is equal to " + deca.format(kmtomile(km)) + " miles");
                     break;
 
             }
         }
     
 	
-	//methods that returns a double value so that it can be more precise than an int value
+	//methods that convert measurements to different types of measurements
 	
     public static double inchestocm(double inch) {
     	//changes the number of inches the user input into centimeters
