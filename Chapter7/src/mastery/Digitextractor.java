@@ -1,3 +1,15 @@
+/*
+
+Program: Digitextractor.java          Date: December 3rd, 2024
+
+Purpose: 
+
+Author: Richard Chang
+School: CHHS
+Course: Computer Science 20
+ 
+
+*/
 package mastery;
 
 import java.util.Scanner;

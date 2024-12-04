@@ -2,7 +2,7 @@
 
 Program: LunchOrder.java          Date: November 28, 2024
 
-Purpose: An application that takes user input a
+Purpose: An application that takes the user input(The lunch order) and adds up the price of each order of food to get the total price
 
 Author: Richard Chang
 School: CHHS
@@ -19,8 +19,11 @@ public class Lunchorder {
 
 			public static void main(String[] args) {
 				//links Food to Lunchorder
-				Food f = new Food();
-				
+				 Food hb = new Food(1.85, 9, 33, 1);
+			     Food salad = new Food(2.00, 1, 11, 5);
+			     Food fries = new Food(1.30, 11, 36, 4);
+			     Food soda = new Food(0.95, 0, 38, 0);
+				 
 				// Lets the user input values and makes it so that decimals only go to the hundredths
 		        Scanner in = new Scanner(System.in);
 		        DecimalFormat deca = new DecimalFormat("#.##");
@@ -36,24 +39,39 @@ public class Lunchorder {
 		     
 		        
 		            
-		           //prompt for user input and applies the f.burger method to it
+		           //prompt for user input
 		           System.out.print("Enter order of hamburgers: ");
-		           f.burger(in.nextInt(), 0, 0, 0);
+		           //used for calculating price later
+		           int Burger = in.nextInt();
+		         //displays the fat carb and fiber values of each order of hamburgers
+		           System.out.println("Each hamburger has " + hb.fat() + "g of fat, " + hb.carbs() + "g of carbs, and " + hb.fiber() + "g of fiber");
 		           
-		           //prompt for user input and applies the f.salad method to it
+		           //prompt for user input 
 		           System.out.print("Enter order of salads: ");
-		           f.salad(in.nextInt(), 0, 0, 0);
+		         //used for calculating price later
+		           int Salad = in.nextInt();
+		           //displays the fat carb and fiber values of each order of salads
+		           System.out.println("Each salad has " + salad.fat() + "g of fat, " + salad.carbs() + "g of carbs, and " + salad.fiber() + "g of fiber");
 		           
-		           //prompt for user input and applies f.fries method to it
+		           //prompt for user input
 		           System.out.print("Enter order of french fries: ");
-		           f.fries(in.nextInt(), 0, 0, 0);
+		         //used for calculating price later
+		           int Fries = in.nextInt();
+		         //displays the fat carb and fiber values of each order of fries
+		           System.out.println("Each order of french fries has " + fries.fat() + "g of fat, " + fries.carbs() + "g of carbs, and " + fries.fiber() + "g of fiber");
 		           
-		           //prompt for user input and applies f.soda method to it
+		           //prompt for user input
 		           System.out.print("Enter order of sodas: ");
-		           f.soda(in.nextInt(), 0, 0, 0);
+		         //used for calculating price later
+		           int Soda = in.nextInt();
+		         //displays the fat carb and fiber values of each order of sodas
+		           System.out.println("Each soda has " + soda.fat() + "g of fat, " + soda.carbs() + "g of carbs, and " + soda.fiber() + "g of fiber");
 		           
-		           //output message that tells the total dollars of the orders using f.orderTotal
-		           System.out.print("Your total is $" + deca.format(f.orderTotal()));
+		           //calculate the total price
+		           double total = ((hb.price() * Burger)  + (salad.price() * Salad) + (fries.price() * Fries) + (soda.price() * Soda));
+		           
+		           //output message that tells the total price of all orders
+		           System.out.println("Your total is $" + deca.format(total));
 		        }
 }
 
