@@ -1,3 +1,15 @@
+/*
+
+Program: Mysavings.java          Date: December 3rd, 2024
+
+Purpose: User can add pennies, nickels, dimes, and quarters to their "bank" and can take money out or see how much money they have also with an option to quit the program
+
+Author: Richard Chang
+School: CHHS
+Course: Computer Science 20
+ 
+
+*/
 package mastery;
 
 import java.util.Scanner;

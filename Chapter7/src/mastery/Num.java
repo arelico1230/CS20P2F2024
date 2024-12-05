@@ -7,7 +7,6 @@ public class Num {
 	   
 	   //Constructor method
 	   public Num(int number) {
-		   //
 	       num = number;
 	   }
 	   

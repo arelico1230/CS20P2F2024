@@ -2,7 +2,7 @@
 
 Program: Digitextractor.java          Date: December 3rd, 2024
 
-Purpose: 
+Purpose:Takes the number the user input and gives options to show the whole number, the ones place, the tens place, the hundreds place, and an option to quit 
 
 Author: Richard Chang
 School: CHHS

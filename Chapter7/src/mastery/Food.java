@@ -16,16 +16,22 @@ public class Food {
 	       fiber = fibers;
 	   }
 	   
-	   // Getter methods for food properties
+	   //method to return price
 	   public double price() {
 	       return price;
 	   }
+	   
+	 //method to return fat
 	   public int fat() {
 	       return fat;
 	   }
+	   
+	 //method to return carbs
 	   public int carbs() {
 	       return carb;
 	   }
+	   
+	 //method to return fiber
 	   public int fiber() {
 	       return fiber;
 	   }
