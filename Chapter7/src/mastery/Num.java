@@ -1,3 +1,15 @@
+/*
+
+Program: Num.java          Date: December 3rd, 2024
+
+Purpose:Takes the number the user input and uses math equations in methods to show the whole number, the ones place, the tens place, the hundreds place
+
+Author: Richard Chang
+School: CHHS
+Course: Computer Science 20
+ 
+
+*/
 package mastery;
   
 public class Num {

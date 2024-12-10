@@ -1,3 +1,15 @@
+/*
+
+Program: Piggybank.java          Date: December 3rd, 2024
+
+Purpose: Takes the user input and adds it to either pen, nic, dime, or quart and can convert these to their monetary value and add them together to make a total or reset the values to 0 to take out money
+
+Author: Richard Chang
+School: CHHS
+Course: Computer Science 20
+ 
+
+*/
 package mastery;
 
 public class PiggyBank {

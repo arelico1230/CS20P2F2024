@@ -1,47 +1,48 @@
 package mastery;
 
 import java.util.Scanner;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class EvensandOdds {
 	
     public static void main(String[] args) {
     	
-        // Create a Random object
-        Random r = new Random();
-        
-        // Lists to store even and odd numbers
-        List<Integer> even = new ArrayList<>();
-        List<Integer> odd = new ArrayList<>();
-        
-        // Generate 25 random numbers between 0 and 99
-        for (int i = 0; i < 25; i++) {
-        	
-        	// Generates a number between 0 and 99
-            int num = r.nextInt(100); 
-            
-            if (num % 2 == 0) {
-                even.add(num);
-            } else {
-                odd.add(num);
-            }
-        }
-        
-        // Display even numbers
-        System.out.print("EVEN: ");
-        for (int num : even) {
-            System.out.print(num + " ");
-        }
-        
-        // Display odd numbers
-        System.out.print("ODD: ");
-        for (int num : odd) {
-            System.out.print(num + " ");
-        }
-    }
-}
+    	int[] num = new int[25];
+
+    	
+    	final int hi = 99;
+		final int low = 0;
+		final int range = hi - low + 1;
+		
+		for(int i = 0; i < 25; i++) {
+			num[i] = (int)(Math.random() * range);
+		}
+		//title
+		System.out.print("odds:");
+		//checking numbers from the array and outputting the odd ones
+		for( int i = 0; i<25; i++) {
+			if ((num[i] % 2) != 0) {
+				System.out.print(num[i]);
+				System.out.print(", ");
+			}
+		}
+		
+		//blank to make new line for evens
+		System.out.println("");
+		
+		//title
+		System.out.print("evens:");
+		//checking numbers from the array and outputting the even ones
+		for( int i = 0; i<25; i++) {
+			if ((num[i] % 2) == 0) {
+
+				System.out.print(num[i]);
+				System.out.print(", ");
+			}
+		}
+	}
+		}
+    
+
 
 
 

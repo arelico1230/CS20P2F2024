@@ -1,3 +1,15 @@
+/*
+
+Program: Food.java          Date: November 28, 2024
+
+Purpose: An application that has changing values for the variable depending on the object in Lunchorder.java
+
+Author: Richard Chang
+School: CHHS
+Course: Computer Science 20
+ 
+
+*/
 package mastery;
 
 public class Food {
