@@ -5,8 +5,10 @@ import java.util.Scanner;
 public class Countletters {
 	public static void main(String[] args) {
 		
-		final int low = 'A'; //smallest possible value
-		 final int hi = 'Z'; //highest possible value
+		//smallest possible value
+		final int low = 'A'; 
+		//highest possible value
+		 final int hi = 'Z'; 
 		 
 		 //letting list of letters have the same amount of elements as letters in alphabet
 		 int[] letterCounts = new int[hi - low + 1];
