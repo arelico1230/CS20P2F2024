@@ -1,3 +1,15 @@
+/*
+
+Program: EvensandOdds.java          Date: December 12th, 2024
+
+Purpose: generates 25 random numbers and separates the odds and evens into two lists
+
+Author: Richard Chang
+School: CHHS
+Course: Computer Science 20
+ 
+
+*/
 package mastery;
 
 import java.util.Scanner;

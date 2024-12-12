@@ -12,6 +12,8 @@ public class Countletters {
 		 
 		 //letting list of letters have the same amount of elements as letters in alphabet
 		 int[] letterCounts = new int[hi - low + 1];
+		 
+		//Lets the user input values
 		 Scanner in = new Scanner(System.in);
 		 
 		 
