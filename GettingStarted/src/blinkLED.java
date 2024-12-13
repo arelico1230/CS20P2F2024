@@ -1,9 +1,7 @@
 //Add Phidgets Library | You added a file called phidget22 when configuring your project. Import gives you access to the Phidgets library code inside that file. 
-package getting;
-
 import com.phidget22.*;
 
-public class GettingStarted {
+public class blinkLED {
     //Handle Exceptions | Exceptions will happen in your code from time to time. These are caused by unexpected things happening. Make sure you’ve added "throws Exception" to your main method.
     public static void main(String[] args) throws Exception{
 
@@ -26,4 +24,5 @@ public class GettingStarted {
         }
     }
 }
+  
   
