@@ -8,7 +8,6 @@ public class Thermostats {
 	
 	public static void main(String[] args) throws Exception {
 	    // Create | Create objects for sensors, buttons, and LEDs
-	    HumiditySensor humiditySensor = new HumiditySensor();
 	    TemperatureSensor temperatureSensor = new TemperatureSensor();
 	    DigitalInput redButton = new DigitalInput();
 	    DigitalInput greenButton = new DigitalInput();
@@ -20,11 +19,11 @@ public class Thermostats {
 	  //Address | Address your four objects which lets your program know where to find them.
 	    redButton.setHubPort(0);
         redButton.setIsHubPortDevice(true);
-        redLED.setHubPort(4);
+        redLED.setHubPort(1);
         redLED.setIsHubPortDevice(true);
         greenButton.setHubPort(5);
         greenButton.setIsHubPortDevice(true);
-        greenLED.setHubPort(1);
+        greenLED.setHubPort(4);
         greenLED.setIsHubPortDevice(true);
         
       //Open | Connect your program to your physical devices.
@@ -34,6 +33,7 @@ public class Thermostats {
         greenButton.open(1000);
         greenLED.open(1000);
         
+        double currTemp = temperatureSensor.getTemperature();
         
         redButton.addStateChangeListener(new DigitalInputStateChangeListener() {
 	        public void onStateChange (DigitalInputStateChangeEvent y) {
@@ -58,23 +58,17 @@ public class Thermostats {
       //Use your Phidgets | This code will print humidity and temperature read by the sensor every 1000ms.
         while(true){
         	
-             System.out.println("Current temperature: " + temperatureSensor.getTemperature() + " °C");
+             System.out.println("Current temperature: " + currTemp + " °C");
              System.out.println("Set temperature: " + temp + " °C");
              Thread.sleep(10000);
         	
-        	if (temperatureSensor.getTemperature() > (temp + 2) && temperatureSensor.getTemperature() < (temp - 2)) {
+        	if (currTemp > (temp + 2) && currTemp < (temp - 2)) {
+        		greenLED.setState(true);
+                redLED.setState(false);}
+        	else if (currTemp <= (temp + 2) && currTemp >= (temp - 2)){
         		
-        	greenLED.setState(true);
-        	Thread.sleep(100);
-        	greenLED.setState(false);
-        	Thread.sleep(100);
-        	continue;}
-        	else {
-        		redLED.setState(true);
-        		Thread.sleep(100);
-        		redLED.setState(false);
-        		Thread.sleep(100);
-        		continue;
+        		greenLED.setState(false);
+                redLED.setState(true);
         	}
         	
 }
