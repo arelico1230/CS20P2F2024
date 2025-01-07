@@ -62,7 +62,6 @@ public class TugOfWar{
                 greenLED.setState(false);
                 Thread.sleep(150);
             }
-            
             //check if either player has won when there has been 10 presses counted
             if (rCount >= 10 || gCount >= 10) {
             	
